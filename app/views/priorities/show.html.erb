@@ -1,0 +1,10 @@
+<h1>Priority <%= @priority.name %></h1>
+
+<p>
+  <strong>Description:</strong>  <%= @priority.description %>
+  <%= link_to edit_priority_path(@priority) do %>
+  	<span class="glyphicon glyphicon-edit"></span>
+  <% end %>
+</p>
+ 
+<%= link_to 'Back', priorities_path %>

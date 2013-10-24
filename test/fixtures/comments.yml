@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  creation_date: 2013-10-24 19:07:19
+  text: MyText
+  ticket: 
+  user: 
+
+two:
+  id: 
+  creation_date: 2013-10-24 19:07:19
+  text: MyText
+  ticket: 
+  user: 

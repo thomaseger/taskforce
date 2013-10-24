@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  creation_date: 2013-10-24 19:04:53
+  user: 
+  status: 
+  milestone: 
+  component: 
+  priority: 
+  category: 
+  feature_request: false
+  description: MyText
+  reproduction: MyText
+  test_suggestion: MyText
+  conclusion: MyText
+
+two:
+  id: 
+  creation_date: 2013-10-24 19:04:53
+  user: 
+  status: 
+  milestone: 
+  component: 
+  priority: 
+  category: 
+  feature_request: false
+  description: MyText
+  reproduction: MyText
+  test_suggestion: MyText
+  conclusion: MyText

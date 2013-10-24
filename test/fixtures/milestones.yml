@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  creation_date: 2013-10-24 18:58:30
+  due_date: 2013-10-24 18:58:30
+  name: MyString
+  description: MyText
+
+two:
+  id: 
+  creation_date: 2013-10-24 18:58:30
+  due_date: 2013-10-24 18:58:30
+  name: MyString
+  description: MyText

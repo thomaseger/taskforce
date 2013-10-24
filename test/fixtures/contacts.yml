@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 
+  user: 
+  ticket: 
+  assignee: false
+
+two:
+  id: 
+  user: 
+  ticket: 
+  assignee: false

@@ -1,0 +1,94 @@
+//---------------------------------------------//
+// Model definition for Taskforce
+//
+// Example:
+//
+// modelname
+//      attr1:type1
+//      attr2:type2
+//      attr3:type3
+//      ...
+//----------------------------------------------//
+
+generation order:   role,       ok
+                    user,       ok
+                    status,     ok
+                    milestone,  ok
+                    component,  ok
+                    priority,   ok
+                    category,   ok
+                    ticket,     ok
+                    comment,    ok  
+                    contact     ok
+
+ticket // defines a task
+    id:primary_key
+    creation_date:time
+        
+    user:reference
+    status:reference
+    milestone:reference
+    component:reference
+    priority:reference
+    category:reference
+    
+    feature_request:boolean
+    description:text
+    reproduction:text
+    test_suggestion:text
+    conclusion:text
+  
+user //represents a user
+    id:primary_key
+    creation_date:time
+    name:string
+    email:string
+    
+    role:reference
+    
+role // viewer, contributor, owner  
+    id:primary_key
+    name:string
+    description:text
+    
+comment //for a ticket
+    id:primary_key
+    creation_date:time
+    text:text
+    
+    ticket:reference
+    user:reference
+
+contact // contact(s) for a ticket
+    id:primary_key
+    user:reference
+    ticket:reference
+    assignee:boolean
+
+status // new, open, feedback, closed
+    id:primary_key
+    name:string
+    description:text
+
+milestone // a time period where tickets can be assigned
+    id:primary_key
+    creation_date:time
+    due_date:time
+    name:string
+    description:text
+    
+component // the corresponding component in the product
+    id:primary_key
+    name:string
+    description:text
+
+priority // the priority (a, b, c or 1, 2, 3 ...)
+    id:primary_key
+    name:string
+    description:text
+    
+category // the category (major, minor, tweak, trivial, typo, ...)
+    id:primary_key
+    name:string
+    description:text   
+    
