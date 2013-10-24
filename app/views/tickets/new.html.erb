@@ -2,62 +2,42 @@
 
 <%= form_for :ticket, url: tickets_path do |f| %>
   <div class="form-group">
-    <%= f.label :user %>
-    <%= f.text_field :user, {:class => 'form-control', :readonly => true, :value => :current_user} %>
+    <%= f.label :description %>
+    <%= f.text_area :description, {:class => 'form-control', :rows => 6} %>
+    <p class="help-block">At first, please describe the bug you have notived or the feature you are interested in.</p>
+  </div>
+  
+  <div class="form-group"> 
+    <%= f.label :test_suggestion %>
+    <%= f.text_area :test_suggestion, {:class => 'form-control', :rows => 6} %>
+    <p class="help-block">Now you have to think about a scenario how your feature or bug can be tested. </p>
   </div>
 
   <div class="form-group">
-    <%= f.label :status %>
-    <%= f.text_field :user, {:class => 'form-control', :readonly => true, :value => :new} %>
+    <%= f.label :reproduction %>
+    <%= f.text_area :reproduction, {:class => 'form-control', :rows => 6} %>
+    <p class="help-block">Nearly done! The developer who works on this ticket, needs to reproduce the behavior of your issue. Please describe each necessary step to reproduce here.</p>
   </div>
 
   <div class="form-group">
     <%= f.label :priority %>
-    <%= f.collection_select :priority, Priority.all, :id, :name, {:prompt => true}, {:class => 'form-control'} %>
+    <%= f.collection_select :priority, Priority.all, :id, :name, {:prompt => 'What do you think how important your issue is?'}, {:class => 'form-control'} %>
   </div>
 
   <div class="form-group">
     <%= f.label :category %>
-    <%= f.collection_select :category, Category.all, :id, :name, {:prompt => true}, {:class => 'form-control'}  %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :milestone %>
-    <%= f.collection_select :milestone, Milestone.all, :id, :name, {:prompt => true}, {:class => 'form-control'} %>
+    <%= f.collection_select :category, Category.all, :id, :name, {:prompt => 'What category does your issue fit in?'}, {:class => 'form-control'}  %>
   </div>
 
   <div class="form-group">  
     <%= f.label :component %>
-    <%= f.collection_select :component, Component.all, :id, :name, {:prompt => true}, {:class => 'form-control'}  %>
+    <%= f.collection_select :component, Component.all, :id, :name, {:prompt => 'Which component is affected?'}, {:class => 'form-control'}  %>
   </div>
   
   <div class="form-group">
     <%= f.check_box :feature_request %>
     <%= f.label :feature_request %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, :class => 'form-control' %>
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :reproduction %>
-    <%= f.text_area :reproduction, :class => 'form-control' %>
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  
-  <div class="form-group"> 
-    <%= f.label :test_suggestion %>
-    <%= f.text_area :test_suggestion, :class => 'form-control' %>
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-
-  <div class="form-group"> 
-    <%= f.label :conclusion %>
-    <%= f.text_area :conclusion, {:class => 'form-control', :readonly => true} %>
-    <p class="help-block">Example block-level help text here.</p>
+    <p>Check this, if this is an idea for a new feature.</p>
   </div>
 
   <div class="form-group"> 
