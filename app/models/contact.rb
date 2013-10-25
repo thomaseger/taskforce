@@ -1,3 +1,5 @@
 class Contact < ActiveRecord::Base
-  attr_accessible :assignee, :id, :ticket, :user
+  belongs_to :ticket
+  belongs_to :user
+  attr_accessible :assignee, :id
 end

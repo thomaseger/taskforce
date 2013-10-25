@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  attr_accessible :creation_date, :email, :id, :name, :role
+  belongs_to :role
+  attr_accessible :email, :id, :name
 end

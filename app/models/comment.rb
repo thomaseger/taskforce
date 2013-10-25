@@ -1,3 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :creation_date, :id, :text, :ticket, :user
+  belongs_to :ticket
+  belongs_to :user
+  attr_accessible :id, :text
 end

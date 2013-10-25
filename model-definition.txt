@@ -10,20 +10,19 @@
 //      ...
 //----------------------------------------------//
 
-generation order:   role,       ok
-                    user,       ok
-                    status,     ok
-                    milestone,  ok
-                    component,  ok
-                    priority,   ok
-                    category,   ok
-                    ticket,     ok
-                    comment,    ok  
-                    contact     ok
+generation order:   role,       
+                    user,       
+                    status,     
+                    milestone,  
+                    component,  
+                    priority,   
+                    category,   
+                    ticket,     
+                    comment,    
+                    contact     
 
 ticket // defines a task
     id:primary_key
-    creation_date:time
         
     user:reference
     status:reference
@@ -40,7 +39,6 @@ ticket // defines a task
   
 user //represents a user
     id:primary_key
-    creation_date:time
     name:string
     email:string
     
@@ -53,7 +51,6 @@ role // viewer, contributor, owner
     
 comment //for a ticket
     id:primary_key
-    creation_date:time
     text:text
     
     ticket:reference
@@ -72,7 +69,6 @@ status // new, open, feedback, closed
 
 milestone // a time period where tickets can be assigned
     id:primary_key
-    creation_date:time
     due_date:time
     name:string
     description:text

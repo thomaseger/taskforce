@@ -6,5 +6,5 @@ class Ticket < ActiveRecord::Base
   belongs_to :priority
   belongs_to :category
   
-  attr_accessible :conclusion, :creation_date, :description, :feature_request, :id, :reproduction, :test_suggestion
+  attr_accessible :conclusion, :description, :feature_request, :id, :reproduction, :test_suggestion
 end
