@@ -10,12 +10,12 @@
 //      ...
 //----------------------------------------------//
 
-generation order:   role,       
+generation order:   role,       x
                     user,       
                     status,     
                     milestone,  
                     component,  
-                    priority,   
+                    priority,   x
                     category,   
                     ticket,     
                     comment,    
