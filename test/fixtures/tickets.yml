@@ -2,7 +2,6 @@
 
 one:
   id: 
-  creation_date: 2013-10-24 19:04:53
   user: 
   status: 
   milestone: 
@@ -17,7 +16,6 @@ one:
 
 two:
   id: 
-  creation_date: 2013-10-24 19:04:53
   user: 
   status: 
   milestone: 

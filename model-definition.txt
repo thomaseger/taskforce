@@ -24,12 +24,12 @@ generation order:   role,
 ticket // defines a task
     id:primary_key
         
-    user:reference
-    status:reference
-    milestone:reference
-    component:reference
-    priority:reference
-    category:reference
+    user:references
+    status:references
+    milestone:references
+    component:references
+    priority:references
+    category:references
     
     feature_request:boolean
     description:text
@@ -42,7 +42,7 @@ user //represents a user
     name:string
     email:string
     
-    role:reference
+    role:references
     
 role // viewer, contributor, owner  
     id:primary_key
@@ -53,13 +53,13 @@ comment //for a ticket
     id:primary_key
     text:text
     
-    ticket:reference
-    user:reference
+    ticket:references
+    user:references
 
 contact // contact(s) for a ticket
     id:primary_key
-    user:reference
-    ticket:reference
+    user:references
+    ticket:references
     assignee:boolean
 
 status // new, open, feedback, closed

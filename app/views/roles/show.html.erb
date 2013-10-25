@@ -1,0 +1,10 @@
+<h1>Role <%= @role.name %></h1>
+
+<p>
+  <strong>Description:</strong>  <%= @role.description %>
+  <%= link_to edit_role_path(@role) do %>
+  	<span class="glyphicon glyphicon-edit"></span>
+  <% end %>
+</p>
+ 
+<%= link_to 'Back', roles_path %>

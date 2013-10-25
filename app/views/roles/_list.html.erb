@@ -1,0 +1,36 @@
+<table class="table table-responsive table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <tbody>
+    <% @roles.each do |role| %>
+      <tr>
+        <td><%= role.name %></td>
+        <td><%= role.description %></td>
+        <td>
+          <%= link_to role_path(role) do %>
+            <span class="glyphicon glyphicon-eye-open"></span>
+          <% end %>
+        </td>
+
+        <td>
+          <%= link_to edit_role_path(role) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+        </td>
+
+        <td>
+          <%= link_to role_path(role), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <span class="glyphicon glyphicon-trash"></span>
+          <% end %>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

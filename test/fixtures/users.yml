@@ -2,14 +2,12 @@
 
 one:
   id: 
-  creation_date: 2013-10-24 18:54:11
   name: MyString
   email: MyString
   role: 
 
 two:
   id: 
-  creation_date: 2013-10-24 18:54:11
   name: MyString
   email: MyString
   role: 
